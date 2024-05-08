@@ -42,8 +42,8 @@ export default function Form({ customers }: { customers: CustomerField[] }) {
         
         {/* Invoice Amount */}
         <div id='customer-error' aria-live='polite' aria-atomic="true">
-              {state.error?.customerId &&
-                state.error.customerId.map((error: string) => (
+              {state.errors?.customerId &&
+                state.errors.customerId.map((error: string) => (
                   <p className='mt-2 text-sm text-red-500' key={error}>{error}</p>
                 ))}
         </div>
